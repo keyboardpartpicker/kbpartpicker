@@ -1,9 +1,23 @@
 services:
-  web:
-    build: .
+  nginx:
+    image: nginx:alpine
     ports:
-      - "8000:5000"
-  redis:
-    image: "redis:alpine"
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/usr/share/nginx/html:ro
+    depends_on:
+      - postgres
 
-    # changed rules and removed typos
+  postgres:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_DB: kbdb
+      POSTGRES_USER: kbadmin
+      POSTGRES_PASSWORD: securepass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
