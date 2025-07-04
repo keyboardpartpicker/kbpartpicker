@@ -6,4 +6,4 @@ services:
   redis:
     image: "redis:alpine"
 
-    # changed rule to an easier one part 2
+    # changed rule
