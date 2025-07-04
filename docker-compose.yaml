@@ -1,11 +1,7 @@
-# TEMPORARY PLACEHOLDER COMPOSE FILE
-version: '3.8'
-
 services:
   web:
-    image: nginx:alpine
+    build: .
     ports:
-      - "80:80"
-    volumes:
-      - ./nginx:/etc/nginx/conf.d:ro
-    restart: unless-stopped
+      - "8000:5000"
+  redis:
+    image: "redis:alpine"
