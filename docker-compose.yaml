@@ -6,4 +6,4 @@ services:
   redis:
     image: "redis:alpine"
 
-    # surely I did not spend all that time just to find out it was a typo in the deploy script and not the webhook misbehaving :v
+    # environment variables?
