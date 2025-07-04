@@ -1,0 +1,11 @@
+# TEMPORARY PLACEHOLDER COMPOSE FILE
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+    restart: unless-stopped
