@@ -1,0 +1,7 @@
+{
+  "name": "kbpartpicker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
