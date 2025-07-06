@@ -20,8 +20,8 @@
 
 <template>
     <div>
-        <h1>Builder</h1>
-        <p>TEMPORARY BUILDER PAGE.</p>
+        <h1>Builder Alpha</h1>
+        <br>
         <h2>Switches</h2>
         <ul>
             <li v-for="switchItem in switches" :key="switchItem.id">
