@@ -21,17 +21,13 @@
 </template>
 
 <style scoped>
-    header {
-        line-height: 1.5;
-    }
-
     .logo {
         display: block;
         margin: 0 auto 2rem;
     }
 
-    @media (min-width: 1024px) {
     header {
+        line-height: 1.5;
         display: flex;
         place-items: center;
         padding-right: calc(var(--section-gap) / 2);
@@ -53,5 +49,4 @@
             font-size: 1.2rem;
         }
     }
-}
 </style>

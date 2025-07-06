@@ -1,3 +1,9 @@
+<script>
+    export default {
+        name: 'Builder',
+    };
+</script>
+
 <template>
     <div>
         <h1>Builder</h1>
@@ -5,12 +11,6 @@
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'Builder',
-    };
-</script>
-
 <style scoped>
- /* STYLE */
+    /* STYLE */
 </style>
