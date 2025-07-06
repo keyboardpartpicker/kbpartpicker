@@ -12,10 +12,14 @@ const pool = new Pool({
     port: parseInt(process.env.DB_PORT, 10),
 });
 
-
 app.get('/switches', async (req, res) => {
-    const result = await pool.query('SELECT * FROM switches');
-    res.json(result.rows);
+    try {
+        const result = await pool.query('SELECT * FROM switches');
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Query error:', err);
+        res.status(500).json({ error: 'Database query failed' });
+    }
 });
 
 app.listen(3001, () => console.log('Server running on port 3001'));
