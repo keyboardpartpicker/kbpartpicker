@@ -8,7 +8,7 @@
         },
         async mounted() {
             try {
-                const response = await fetch('http://localhost:3001/switches');
+                const response = await fetch('/api/switches');
                 const data = await response.json();
                 this.switches = data;
             } catch (error) {
