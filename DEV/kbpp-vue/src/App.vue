@@ -1,47 +1,73 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div class="main">
+      <header class="navbar">
+        <div class="logo-title">
+          <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="25" height="25" />
+          <h1 class="green">KBPP ALPHA</h1>
+        </div>
+        <nav class="navigation">
+          <router-link to="/">Home</router-link>
+          <router-link to="/builder">Builder</router-link>
+        </nav>
+      </header>
+  
+      <main class="content">
+        <router-view></router-view>
+      </main>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
-</template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
+  </template>
+  
+  <style scoped>
+  .content {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0rem;
   }
 
+  .main {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Top bar styling */
+  .navbar {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #252a2f;
+    border-bottom: 1px solid  hsla(160, 100%, 37%, 1);
+  }
+  
+  /* Logo and title styling */
+  .logo-title {
+    display: flex;
+    align-items: center;
+  }
+  
   .logo {
-    margin: 0 2rem 0 0;
+    margin-right: 1rem;
   }
-
-  header .wrapper {
+  
+  .green {
+    color: #42b983;
+    margin: 0;
+  }
+  
+  /* Navigation styling */
+  .navigation {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    gap: 1rem;
   }
-}
-</style>
+  
+  .navigation a {
+    text-decoration: none;
+    color: #42b983;
+  }
+  
+  .navigation a.router-link-active {
+    font-weight: bold;
+  }
+  </style>
