@@ -4,7 +4,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./static:/usr/share/nginx/html:ro
     depends_on:
       - postgres
