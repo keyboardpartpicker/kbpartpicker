@@ -17,8 +17,7 @@
 - **Cloudflare Tunnel**: Proxies traffic to NGINX while protecting the server.
 
 ### **External-facing Local Services**
-- **NGINX**: Serves static assets and proxies requests to Traefik.
-- **Traefik**: Handles backend services dynamically.
+- **NGINX**: Serves static assets to Cloudflare.
 
 ### **Internal-facing Local Services**
 - **PostgreSQL**: Handles all site data and processes database actions.

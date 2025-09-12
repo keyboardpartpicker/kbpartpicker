@@ -25,12 +25,12 @@
         <h2>Switches</h2>
         <ul>
             <li v-for="switchItem in switches" :key="switchItem.id">
-                {{ switchItem.name }} ({{ switchItem.type }}) – {{ switchItem.sound_profile }}
+                {{ switchItem.name }} ({{ switchItem.type }}) – {{ switchItem.url }}
             </li>
         </ul>
     </div>
 </template>
 
 <style scoped>
-    /* STYLE */
+    /* STYLE */     
 </style>
