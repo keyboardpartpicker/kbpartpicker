@@ -1,0 +1,43 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build / cache
+dist/
+build/
+.cache/
+.tmp/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE/editor junk
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# OS junk
+ehthumbs.db
+desktop.ini
+
+# Project-specific
+output/          # scraped data or generated JSON
+scratch.js       # temp test files if you have them
