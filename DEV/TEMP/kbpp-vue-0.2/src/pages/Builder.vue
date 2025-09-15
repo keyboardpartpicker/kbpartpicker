@@ -1,11 +1,9 @@
-<script lang="ts">
-    import { defineComponent } from 'vue';
-
-    export default defineComponent({
+<script>
+    export default {
         name: 'Builder',
         data() {
             return {
-                switches: [] as Array<{ id: number; name: string; type: string; url: string }>,
+                switches: [],
             };
         },
         async mounted() {
@@ -17,12 +15,12 @@
                 console.error('Error loading switches:', error);
             }
         },
-    });
+    };
 </script>
 
 <template>
     <div>
-        <h1>Builder Page - ALPHA</h1>
+        <h1>Builder Alpha</h1>
         <br>
         <h2>Switches</h2>
         <ul>

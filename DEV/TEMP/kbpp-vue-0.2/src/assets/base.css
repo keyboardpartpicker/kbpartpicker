@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+:root {
+  --text: #e7e8e9;
+  --background: #101214;
+  --primary: #354065;
+  --secondary: #c2492f;
+  --accent: #465484;
+
+  --linearPrimarySecondary: linear-gradient(#354065, #c2492f);
+  --linearPrimaryAccent: linear-gradient(#354065, #465484);
+  --linearSecondaryAccent: linear-gradient(#c2492f, #465484);
+  --radialPrimarySecondary: radial-gradient(#354065, #c2492f);
+  --radialPrimaryAccent: radial-gradient(#354065, #465484);
+  --radialSecondaryAccent: radial-gradient(#c2492f, #465484);
+
+  --background-hsl: 220 8% 7%;
+  --foreground-hsl: 218 5% 91%;
+
+  --card: 220 8% 9%;
+  --card-foreground: 218 5% 91%;
+
+  --popover: 220 8% 9%;
+  --popover-foreground: 218 5% 91%;
+
+  --primary-hsl: 228 29% 29%;
+  --primary-foreground: 218 5% 91%;
+
+  --secondary-hsl: 15 61% 49%;
+  --secondary-foreground: 218 5% 91%;
+
+  --muted: 220 8% 15%;
+  --muted-foreground: 218 5% 65%;
+
+  --accent-hsl: 228 29% 40%;
+  --accent-foreground: 218 5% 91%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 218 5% 91%;
+
+  --border: 220 8% 20%;
+  --input: 220 8% 20%;
+  --ring: 228 29% 29%;
+
+  --radius: 0.5rem;
+
+  --sidebar-background: 220 8% 9%;
+  --sidebar-foreground: 218 5% 91%;
+  --sidebar-primary: 228 29% 29%;
+  --sidebar-primary-foreground: 218 5% 91%;
+  --sidebar-accent: 220 8% 15%;
+  --sidebar-accent-foreground: 218 5% 91%;
+  --sidebar-border: 220 8% 20%;
+  --sidebar-ring: 228 29% 29%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+#app {
+  width: 100vw;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* Custom scrollbar styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary-hsl)) hsl(var(--muted));
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary-hsl));
+  border-radius: 4px;
+  border: 1px solid hsl(var(--border));
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent-hsl));
+}
+
+*::-webkit-scrollbar-corner {
+  background: hsl(var(--muted));
+}
