@@ -4,8 +4,8 @@ services:
     ports:
       - "80:80"
     volumes:
+      - ./projects/kbpartpicker/static:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./static:/usr/share/nginx/html:ro
     depends_on:
       - api
 
